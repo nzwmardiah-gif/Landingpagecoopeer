@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cooper Garden Morning — Pilates, Brunch & Bouquet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f8f3; --ink:#26382f; --muted:#5d7065;
+  --leaf:#6f9a7b; --leaf-d:#3f6b51; --pink:#f4c6d3; --pink-d:#d9849f;
+  --lilac:#d9cdf0; --lilac-d:#8c77c2; --card:#ffffff; --line:#dfe8dd;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#18221c; --ink:#eaf2ea; --muted:#a6b8ab; --card:#223027; --line:#33463a;
+  --pink:#5b3a47; --lilac:#3f375a; --leaf-d:#9cc9aa; --pink-d:#f0a9bf; --lilac-d:#c4b4ef;}}
+:root[data-theme="dark"]{
+  --bg:#18221c; --ink:#eaf2ea; --muted:#a6b8ab; --card:#223027; --line:#33463a;
+  --pink:#5b3a47; --lilac:#3f375a; --leaf-d:#9cc9aa; --pink-d:#f0a9bf; --lilac-d:#c4b4ef;}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 "Nunito Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:72px 0 110px;
+  background:radial-gradient(circle at 15% 20%,var(--pink) 0,transparent 45%),
+             radial-gradient(circle at 85% 10%,var(--lilac) 0,transparent 42%),
+             linear-gradient(180deg,#dbe9d7,var(--bg))}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 15% 20%,#4a3340 0,transparent 45%),radial-gradient(circle at 85% 10%,#383156 0,transparent 42%),linear-gradient(180deg,#22352a,var(--bg))}}
+.brand{font-weight:700;letter-spacing:.04em;display:flex;align-items:center;gap:10px}
+.brand i{width:14px;height:14px;border-radius:50% 0 50% 50%;background:var(--leaf);display:inline-block;transform:rotate(45deg)}
+.hero h1{font-size:clamp(2.8rem,9vw,6rem);margin:54px 0 18px;max-width:11ch;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--pink-d)}
+.hero p{max-width:46ch;color:var(--muted);font-size:1.15rem}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 34px}
+.meta span{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-weight:600;font-size:.95rem}
+.btn{display:inline-block;background:var(--leaf-d);color:#fff;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:99px;border:0;cursor:pointer;font:inherit;font-weight:700;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--lilac-d);outline-offset:3px}
+:root[data-theme="dark"] .btn{color:#13201a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#13201a}}
+.petals{position:absolute;right:-40px;bottom:-30px;width:min(420px,70vw);opacity:.9;pointer-events:none}
+@media (prefers-reduced-motion:no-preference){.petals{animation:sway 9s ease-in-out infinite alternate;transform-origin:bottom right}}
+@keyframes sway{to{transform:rotate(-4deg)}}
+/* sections */
+section{padding:76px 0}
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:52ch;margin-bottom:38px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.act{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:28px}
+.act:nth-child(1){border-radius:26px 26px 90px 26px}
+.act:nth-child(2){border-radius:90px 26px 26px 26px}
+.act:nth-child(3){border-radius:26px 90px 26px 26px}
+.act:nth-child(4){border-radius:26px 26px 26px 90px}
+.dot{width:46px;height:46px;border-radius:50%;margin-bottom:16px}
+.g{background:#cfe3d2}.p{background:var(--pink)}.l{background:var(--lilac)}.g2{background:#e6efc9}
+.act h3{font-size:1.4rem;margin-bottom:8px}
+.act p{color:var(--muted);font-size:.98rem}
+/* rundown */
+.run{background:linear-gradient(135deg,var(--lilac),var(--pink));border-radius:32px;padding:40px 30px}
+.run ol{list-style:none;padding:0;display:grid;gap:0;max-width:620px}
+.run li{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:16px 0;border-bottom:1px dashed rgba(38,56,47,.25)}
+:root[data-theme="dark"] .run li{border-color:rgba(255,255,255,.2)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .run li{border-color:rgba(255,255,255,.2)}}
+.run li:last-child{border:0}
+.run b{font-family:Fraunces,serif;font-size:1.15rem}
+/* giveaway */
+.give{background:var(--leaf-d);color:#fff;border-radius:32px;padding:44px 32px;text-align:center}
+.give h2{color:#fff}.give p{max-width:48ch;margin:0 auto;opacity:.92}
+:root[data-theme="dark"] .give{background:#2f4d3b}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .give{background:#2f4d3b}}
+/* form */
+form{display:grid;gap:14px;max-width:520px;background:var(--card);border:1px solid var(--line);padding:30px;border-radius:28px}
+label{font-weight:700;font-size:.92rem;display:grid;gap:6px}
+input,select{font:inherit;padding:13px 16px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.ok{display:none;background:var(--pink);padding:14px 18px;border-radius:14px;font-weight:600}
+footer{padding:40px 0 60px;color:var(--muted);text-align:center;font-size:.92rem}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><i></i> COOPER</div>
+    <h1>The <em>Belle</em> PILATES</h1>
+    <p>"MOVE, MINGLE, and MAKE it a MOMENT" One day. One vibe. One beautiful moment. Start your day with an energizing Pilates session, enjoy a relaxing brunch, create your own beautiful bouquet, and meet new friends in a warm and welcoming atmosphere. Come move with us, make new connections, and create moments that are not only beautiful to remember, but also meaningful to experience.</p>
+    <div class="meta">
+      <span>Sabtu, 28 November 2026</span>
+      <span>08.00 – 13.00 WIB</span>
+      <span>Eat More Steak & Resto, Medan</span>
+    </div>
+    <a class="btn" href="#daftar">Daftar sekarang</a>
+  </div>
+  <svg class="petals" viewBox="0 0 400 300" aria-hidden="true">
+    <circle cx="300" cy="200" r="70" fill="#f4c6d3"/><circle cx="220" cy="240" r="55" fill="#d9cdf0"/>
+    <circle cx="360" cy="120" r="48" fill="#d9cdf0"/><circle cx="300" cy="200" r="22" fill="#fff6f8"/>
+    <circle cx="220" cy="240" r="17" fill="#f6f1ff"/><circle cx="360" cy="120" r="15" fill="#f6f1ff"/>
+    <path d="M300 270 C290 220 270 210 250 190" stroke="#6f9a7b" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <ellipse cx="262" cy="196" rx="30" ry="12" fill="#8fb79a" transform="rotate(-35 262 196)"/>
+    <ellipse cx="335" cy="250" rx="34" ry="13" fill="#6f9a7b" transform="rotate(25 335 250)"/>
+  </svg>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <h2>Empat hal yang kamu dapat</h2>
+    <p class="lead">Satu pagi, empat kegiatan. Cocok datang sendiri atau bareng teman.</p>
+    <div class="grid">
+      <div class="act"><div class="dot g"></div><h3>Pilates</h3><p>Sesi ringan dengan instruktur, di atas matras di rumput. Pemula boleh ikut.</p></div>
+      <div class="act"><div class="dot p"></div><h3>Brunch</h3><p>Menu segar dan manis untuk mengisi tenaga setelah bergerak.</p></div>
+      <div class="act"><div class="dot l"></div><h3>Making bouquet</h3><p>Pilih bunga, rangkai sendiri, lalu bawa pulang buketmu.</p></div>
+      <div class="act"><div class="dot g2"></div><h3>Networking</h3><p>Ngobrol santai dengan sesama peserta dan kenalan baru.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="run">
+      <h2>Susunan acara</h2>
+      <p class="lead" style="margin-bottom:22px">Jadwal bisa berubah sedikit mengikuti cuaca.</p>
+      <ol>
+        <li><b>08.00</b><span>Registrasi dan welcome drink</span></li>
+        <li><b>08.30</b><span>Pilates session</span></li>
+        <li><b>09.45</b><span>Brunch</span></li>
+        <li><b>11.00</b><span>Making bouquet</span></li>
+        <li><b>12.00</b><span>Networking dan sesi foto</span></li>
+        <li><b>12.30</b><span>Giveaway dan penutup</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="give">
+      <h2>Ada giveaway untuk peserta</h2>
+      <p>Setiap peserta yang hadir otomatis ikut undian di akhir acara. Hadiahnya kami umumkan di hari H, jadi datang lebih awal ya.</p>
+    </div>
+  </div>
+</section>
+
+<section id="daftar">
+  <div class="wrap">
+    <h2>Amankan tempatmu</h2>
+    <p class="lead">Kuota terbatas supaya acaranya tetap nyaman. Isi data di bawah, tim Cooper akan menghubungimu lewat WhatsApp.</p>
+    <form id="f">
+      <label>Nama lengkap<input required name="nama" autocomplete="name"></label>
+      <label>Nomor WhatsApp<input required name="wa" type="tel" inputmode="tel" autocomplete="tel"></label>
+      <label>Pengalaman pilates
+        <select name="lvl"><option>Belum pernah</option><option>Pemula</option><option>Sudah rutin</option></select>
+      </label>
+      <button class="btn" type="submit">Kirim pendaftaran</button>
+      <div class="ok" id="ok" role="status">Terima kasih! Pendaftaranmu sudah kami catat.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>© Cooper. Sampai jumpa di taman.</footer>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('ok').style.display='block';
+  this.reset();
+});
+</script>
+</body>
+</html>
